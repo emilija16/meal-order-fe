@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="wrapper">
+      <div class="content">
+        <div class="title">
+          <h3>Order: {{order.id}}</h3>
+          <p>{{order.orderDateTime}}</p>
+          <p><span class="bold">User:</span> {{order.user.firstName}} {{order.user.lastName}}</p>
+          <p class="price"><span class="bold">Total price:</span> <span class="total-price">{{order.totalPrice}}</span></p>
+          <p><span class="bold">Order items:</span></p>
+         </div>
+          <div class="order-items" *ngFor="let orderItem of order.shoppingItems">
+            <ul>
+                <li>
+                    <i class="fas fa-solid fa-utensils"></i> {{orderItem.meal.name}}
+                </li>
+        </ul>
+          <div class="size">
+            <p></p>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>

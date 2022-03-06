@@ -1,0 +1,111 @@
+.title {
+  margin-top: 30px;
+  h2 {
+    color: #4e763b;
+    font-weight: bold;
+  }
+}
+.message-dm h5 {
+  margin-top: 30px;
+  color: red;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 50px;
+  img {
+    width: 200px;
+    height: 140px;
+  }
+
+  .isForTomorrow {
+    color: red;
+    font-weight: bold;
+  }
+
+  .wrapper {
+    width: 360px;
+    height: 480px;
+    background: white;
+    margin-left: 30px;
+    border-radius: 30px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 5px 0px #4e763b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+    .title {
+      margin-top: 5px;
+      text-align: center;
+      h3 {
+        font-weight: bold;
+        color: #4e763b;
+      }
+    }
+
+    button {
+      margin-top: 1px;
+    }
+
+    button.btn.btn-danger {
+      margin-left: 10px;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      p.errorMessage {
+        color: red;
+        margin-top: 3px;
+      }
+
+      .description {
+        margin-top: 20px;
+        p,
+        label {
+          font-size: 14px;
+
+          span {
+            font-size: 20px;
+            color: #f17c1e;
+            font-weight: bold;
+          }
+        }
+
+        .quantity {
+          input {
+            width: 100px;
+            display: inline-block;
+          }
+        }
+
+        .price {
+          margin-top: 30px;
+        }
+      }
+
+      img {
+        margin-top: 15px;
+      }
+
+      button {
+        background-color: #f17c1e;
+        color: white;
+        margin-top: 0px;
+        margin-left: 170px;
+        padding: 5px 10px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  button.btn.btn-green {
+    border: 1px solid #4e763b;
+    color: #4e763b;
+  }
+}

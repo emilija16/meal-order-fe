@@ -1,0 +1,23 @@
+<div class="container">
+    <button class="btn btn-green" (click)="addMealSize()"><i class="fas fa-plus"></i> Add Meal Size</button>
+    <div class="table-content">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ms of mealSize">
+            <td>{{ms.id}}</td>
+            <td>{{ms.name}}</td>
+            <td><button class="btn btn-green" (click)="editMealSize(ms.id)"> Edit</button></td>
+            <td><button class="btn btn-danger" (click)="deleteMealSize(ms.id)"> Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+
+  .wrapper {
+    width: 450px;
+    height: 625px;
+    background: white;
+    margin: auto;
+    border-radius: 30px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 5px 0px #4e763b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .text-center {
+    i {
+      color: #4e763b;
+      font-size: 20px;
+      margin-right: 5px;
+    }
+    .black-text {
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    h4 {
+      color: #4e763b;
+      font-weight: bold;
+    }
+  }
+
+  label {
+    width: 100%;
+    margin-top: 10px;
+
+    &.control-label.col-sm-2 {
+      width: 120px;
+    }
+  }
+}
+
+button {
+  background-color: #4e763b;
+  color: white;
+  margin-top: 10px;
+
+  &.btn.btn-outline-secondary.calendar {
+    margin-left: 5px;
+  }
+}
+
+input,
+select {
+  width: 200px;
+}
+
+form {
+  .text-center h4 {
+    color: #4e763b;
+  }
+
+  input,
+  select {
+    margin-top: 5px;
+  }
+
+  input:focus {
+    box-shadow: 0px 0px 5px 1px #4e763b;
+    border: 1px solid #4e763b;
+  }
+
+  select:focus {
+    box-shadow: 0px 0px 5px 1px #4e763b;
+    border: 1px solid #4e763b;
+  }
+  .form-group {
+    .error-message {
+      width: 200px;
+    }
+  }
+}

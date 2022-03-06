@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="frame">
+    <div class="wrapper">
+        <p class="title">Sign In</p> 
+        <form name="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group inputWithIcon">
+            <input placeholder="Email" class="form-control singnin-input" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+            <i class="fas fa-user fa-lg fa-fw"  aria-hidden="true"></i>
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+              <div class="error-message" *ngIf="f['email'].errors['required']">Email is required</div>
+              <div class="error-message" *ngIf="f['email'].errors['email']">Email is invalid</div>
+            </div>
+          </div>
+          <div class="form-group inputWithIcon">
+            <input placeholder="Password" class="form-control singnin-input" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+            <i class="fas fa-lock fa-lg fa-fw"  aria-hidden="true"></i>
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+              <div class="error-message" *ngIf="f['password'].errors['required']">Password is required</div>
+            </div>
+          </div>
+          <button type="submit" class="sign-in-btn">Sign In</button>
+        </form>          
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="wrapper">
+  <form name="form" [formGroup]="form" (ngSubmit)="save()">
+    <div class="text-center">
+      <h4><span class="black-text"><i class="fas fa-utensils"></i> Add New</span> Meal</h4>
+    </div>
+    <div class="form-group col-lg-4">
+      <label>Name</label>
+      <input placeholder="Name" class="form-control signup-input" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
+        <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+          <div class="error-message" *ngIf="f['name'].errors['required']">This field is required</div>
+        </div>
+    </div>
+    <div class="form-group col-lg-4">
+      <label>Description</label>
+      <input placeholder="Description" class="form-control signup-input" formControlName="description" [ngClass]="{ 'is-invalid': submitted && f['description'].errors }">
+        <div *ngIf="submitted && f['description'].errors" class="invalid-feedback">
+          <div class="error-message" *ngIf="f['description'].errors['required']">This field is required</div>
+        </div>
+    </div>
+    <div class="form-group col-lg-4">
+      <label>Contributions</label>
+      <input placeholder="Contributions" class="form-control signup-input" formControlName="contributions" [ngClass]="{ 'is-invalid': submitted && f['contributions'].errors }">
+        <div *ngIf="submitted && f['contributions'].errors" class="invalid-feedback">
+          <div class="error-message" *ngIf="f['contributions'].errors['required']">This field is required</div>
+        </div>
+    </div>
+    <div class="form-group col-lg-4">
+      <label class="control-label col-sm-2" for="lname">Select meal type</label>
+      <div class="col-sm-10">
+        <select class="form-control col-lg-8" [formControl]="mealTypeId">
+          <option *ngFor="let mealType of mealTypes" value={{mealType.id}}>{{mealType.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-lg-4">
+      <label class="control-label col-sm-2" for="lname">Select meal size</label>
+      <div class="col-sm-10">
+        <select class="form-control col-lg-8" [formControl]="mealSizeId">
+          <option *ngFor="let ms of mealSize" value={{ms.id}}>{{ms.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group col-lg-4">
+      <label>Price</label>
+      <input type="number" placeholder="Price" class="form-control signup-input" formControlName="price" [ngClass]="{ 'is-invalid': submitted && f['price'].errors }">
+        <div *ngIf="submitted && f['price'].errors" class="invalid-feedback">
+          <div class="error-message" *ngIf="f['price'].errors['required']">This field is required</div>
+        </div>
+    </div>
+    <button type="submit" class="btn">Save</button>
+  </form>
+  </div>
+</div>

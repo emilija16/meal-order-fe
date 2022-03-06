@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="form-group">
+    <p>Date from</p>
+    <div class="input-group">
+      <input class="form-control" placeholder="yyyy-mm-dd"
+             name="dp" ngbDatepicker #d="ngbDatepicker" [(ngModel)]="dateFrom">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fas fa-calendar-alt"></i></button>
+      </div>
+    </div>
+    <button class="btn btn-submit" (click)="submit()">Submit</button>
+    <div>
+      <p class="error-message"  *ngIf="invalidDate">The date you selected is in the past. </p>
+    </div>
+  </div>
+  <div class="dates">
+    <ul>
+      <li *ngFor="let date of formatDates"><button class="btn" (click)="open(content, date); getDate(date)"><i class="fas fa-utensils"></i> {{date | date:'EEE'}}</button></li>
+    </ul>
+  </div>
+    <div class="form-group upload-image">
+      <input type="file" id="file" name="file" (change)="fileChange($event)">
+    </div>
+  <button class="btn btn-create" type="submit" (click)="createWeeklyMenu()">Create Weekly Menu</button>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Daily Menu ({{dateModal}})</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Contributions</th>
+          <th scope="col">Price</th>
+          <th scope="col">Add</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meal of meals">
+          <td>{{meal.name}}</td>
+          <td>{{meal.contributions}}</td>
+          <td>{{meal.price}}</td>
+          <td><button class="btn btn-green" (click)="addMeal(meal, dateModal)">Add</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-2">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Contributions</th>
+          <th scope="col">Price</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meal of selectedMeals">
+          <td>{{meal.name}}</td>
+          <td>{{meal.contributions}}</td>
+          <td>{{meal.price}}</td>
+          <td><button class="btn" (click)="deleteMeal(meal.id, dateModal)"><i class="far fa-trash-alt"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-green" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>

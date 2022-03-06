@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  width: 1000px;
+  margin-top: 30px;
+  flex-direction: column;
+  margin-left: 350px;
+
+  select {
+    width: 350px;
+    float: left;
+  }
+  i {
+    margin-right: 5px;
+    color: #4e763b;
+  }
+
+  table {
+    margin-top: 15px;
+
+    td {
+      button {
+        background-color: #4e763b;
+        color: white;
+      }
+    }
+  }
+
+  .error-message {
+    p {
+      font-size: 16px;
+      width: 250px;
+      padding: 5px;
+    }
+  }
+}

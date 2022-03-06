@@ -1,0 +1,28 @@
+<div class="container">
+    <p>Select user</p>
+    <select class="form-select" aria-label="Default select example" (change)="valueSelected($event)">
+        <option value="">---</option>
+        <option [value]="user.id" *ngFor="let user of users"> {{ user.email }} </option>
+    </select>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th><i class="fas fa-solid fa-user"></i> User</th>
+            <th>Date and time</th>
+            <th>Total price</th>
+            <th>View details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of ordersList">
+            <td>{{order.user.firstName}} {{order.user.lastName}}</td>
+            <td>{{order.orderDateTime}}</td>
+            <td>{{order.totalPrice}}</td>
+            <td><button class="btn" (click)="orderDetails(order.id)">View order</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="noOrders" class="error-message">
+        <p>No orders yet.</p>
+      </div>
+</div>

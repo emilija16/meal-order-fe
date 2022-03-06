@@ -1,0 +1,23 @@
+<div class="container">
+  <button class="btn btn-green" (click)="addMealType()"><i class="fas fa-plus"></i> Add New Meal Type</button>
+  <div class="table-content">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mealType of mealTypes">
+          <td>{{mealType.id}}</td>
+          <td>{{mealType.name}}</td>
+          <td><button class="btn btn-green" (click)="editMealType(mealType.id)"> Edit</button></td>
+          <td><button class="btn btn-danger" (click)="deleteMealType(mealType.id)"> Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

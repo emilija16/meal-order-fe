@@ -1,0 +1,27 @@
+<div class="add-button">
+  <button class="btn btn-green" (click)="addMeal()"><i class="fas fa-plus"></i> Add New Meal</button>
+</div>
+<div class="container">
+  <div class="meals">
+    <div class="wrapper" *ngFor="let meal of meals">
+      <div class="content">
+        <div class="title">
+          <h3>{{meal.name}}</h3>
+         </div>
+         <img [src]="meal.image" alt="Meal Image">
+          <div class="description">
+            <div class="contributions">
+              <p>Contributions: {{meal.contributions}}</p>
+            </div>
+          <div class="size">
+            <p>Meal size: {{meal.mealSize.name}}</p>
+          </div>
+        </div>
+      <div class="buttons">
+        <button class="btn btn-green" (click)="editMeal(meal.id)"> Edit</button>
+        <button class="btn btn-danger" (click)="deleteMeal(meal.id)"> Delete</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>

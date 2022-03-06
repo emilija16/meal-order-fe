@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 150px;
+
+  .wrapper {
+    width: 600px;
+    height: 650px;
+    background: white;
+    margin: auto;
+    border-radius: 30px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 5px 0px #4e763b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+button {
+  background-color: #4e763b;
+  color: white;
+  margin-top: 10px;
+}
+
+input,
+select {
+  width: 250px;
+  margin-top: 10px;
+}
+label.control-label.col-sm-2 {
+  width: 220px;
+}
+form {
+  .form-group.col-lg-4 {
+    margin-top: 15px;
+  }
+  .text-center h4 {
+    color: #4e763b;
+    i {
+      color: #4e763b;
+      font-size: 20px;
+      margin-right: 5px;
+    }
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+}

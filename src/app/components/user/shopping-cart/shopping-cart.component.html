@@ -1,0 +1,73 @@
+<div class="empty-cart" *ngIf="isEmpty"><i class="fas fa-shopping-cart"></i>
+    <h5>Your shopping cart is empty <i class="far fa-frown-open"></i></h5>
+</div>
+<div *ngIf="!isEmpty" class="container">
+    <div  class="card">
+    <table class="table table-hover shopping-cart-wrap">
+    <thead class="text-muted">
+    <tr>
+      <th scope="col">Meal</th>
+      <th scope="col" width="120">Quantity</th>
+      <th scope="col" width="120">Price</th>
+      <th scope="col" width="200" class="text-right">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of orderItems">
+    <td>
+    <figure class="media">
+        <img [src]="item.meal.image" class="img-thumbnail img-sm">
+        <figcaption class="media-body">
+            <h5 class="title text-truncate">{{item.meal.name}} </h5>
+            <dl class="param param-inline small">
+              <dt>Size: </dt>
+              <dd>{{item.meal.mealSize.name}}</dd>
+            </dl>
+            <dl class="param param-inline small">
+              <dt>Type: </dt>
+              <dd>{{item.meal.mealType.name}}</dd>
+            </dl>
+        </figcaption>
+    </figure> 
+        </td>
+        <td> 
+            <div class="quantity"> 
+                <var class="quantity">{{item.quantity}}</var> 
+            </div>
+        </td>
+        <td> 
+            <div class="price-wrap"> 
+                <var class="price">{{item.meal.price}}</var> 
+            </div>
+        </td>
+        <td class="text-right"> 
+        <button (click)="removeFromCart(item)" class="btn btn-outline-danger"> × Remove</button>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+</div> 
+<div class="error-message">{{errorMessage}}</div>
+<div class="order">
+    <div class="total-price">
+        <p>Total price: {{total}}</p>
+    </div>
+    <button type="button" class="btn btn-order" (click)="open(content)">Order</button>
+</div>   
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Confirm</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Are you sure?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline btn-yes" (click)="orderMeals(); c('Save click')">Yes</button>
+      <button type="button" class="btn btn-outline btn-cancel" (click)="c('Save click')">Cancel</button>
+    </div>
+</ng-template>

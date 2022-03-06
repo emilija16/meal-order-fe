@@ -1,0 +1,35 @@
+<div class="title text-center">
+    <h2>Daily Menu {{todayDateFormat}}</h2>
+</div>
+<!-- <div class="message-dm" *ngIf="mealsDailyMenu.length === 0">
+  <h5 class="text-center">The daily menu for this day has not been added yet!</h5>
+</div> -->
+<div class="container">
+    <div class="wrapper" *ngFor="let meal of mealsDailyMenu">
+      <div class="content">
+        <div class="title">
+          <h3>{{meal.name}}</h3>
+         </div>
+        <img [src]="meal.image">
+          <div class="description">
+            <div class="contributions">
+              <p>Contributions: {{meal.contributions}}</p>
+            </div>
+          <div class="size">
+            <p>Meal size: {{meal.mealSize.name}}</p>
+          </div>
+          <div class="quantity">
+            <label>Quantity: <input class="form-control" type="number" [(ngModel)]="quantity" min="1"></label>
+          </div>
+          <p class="errorMessage" *ngIf="errorMessage">Negative number</p>
+          <div class="price">
+            <p><span>Price: {{meal.price}}</span></p>
+          </div>
+          <div class="isForTomorrow" *ngIf="meal.tomorrow" >
+            * Order earlier
+          </div>
+        </div>
+        <button class="btn" (click)="addToCart(meal)" [disabled]="!buttonEnabled">Add to cart</button>
+    </div>
+  </div>
+</div>

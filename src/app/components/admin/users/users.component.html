@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="table-content">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Username</th>
+            <th scope="col">Active</th>
+            <th scope="col">Ban user</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phoneNumber}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.isActive}}</td>
+            <td><button class="btn btn-danger" (click)="banUser(user.id)"> Ban user</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

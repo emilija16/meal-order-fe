@@ -1,0 +1,142 @@
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 180px;
+  flex-direction: column;
+  i {
+    font-size: 100px;
+    color: #4e763b;
+  }
+  h5 {
+    margin-top: 30px;
+    color: #4e763b;
+    font-weight: bold;
+    i {
+      color: #4e763b;
+      font-size: 20px;
+    }
+  }
+  button {
+    border: 1px solid #4e763b;
+    color: #4e763b;
+  }
+}
+
+.container {
+  margin-top: 100px;
+  width: 800px;
+
+  figcaption.media-body {
+    display: inline-block;
+    vertical-align: top;
+
+    .list-meals {
+      ul {
+        padding: 1px;
+      }
+      li {
+        width: 100%;
+        list-style-type: none;
+      }
+    }
+  }
+
+  .order {
+    float: right;
+    margin-top: 20px;
+
+    .total-price p {
+      font-size: 16px;
+      color: #f17c1e;
+      font-weight: bold;
+    }
+  }
+
+  .btn.btn-order {
+    background-color: #f17c1e;
+    color: white;
+    padding: 5px 25px;
+    float: right;
+
+    &:hover {
+      background-color: #ec7514;
+      color: white;
+    }
+  }
+}
+
+.param {
+  margin-bottom: 7px;
+  line-height: 1.4;
+}
+.param-inline dt {
+  display: inline-block;
+}
+.param dt {
+  margin: 0;
+  margin-right: 7px;
+  font-weight: 600;
+}
+.param-inline dd {
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.param dd {
+  margin: 0;
+  vertical-align: baseline;
+}
+
+.shopping-cart-wrap .price {
+  color: #f17c1e;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+  display: block;
+}
+var {
+  font-style: normal;
+
+  &.quantity {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+}
+
+.media img {
+  margin-right: 1rem;
+}
+.img-sm {
+  width: 90px;
+  max-height: 75px;
+  object-fit: cover;
+}
+.error-message {
+  color: red;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.modal-header {
+  h4 {
+    color: #4e763b;
+  }
+  button {
+    border: none;
+    color: #ec7514;
+    background-color: white;
+  }
+}
+
+.modal-footer {
+  button.btn-yes {
+    color: #4e763b;
+    border: 1px solid #4e763b;
+  }
+
+  button.btn-cancel {
+    border: 1px solid #ec7514;
+    color: #ec7514;
+  }
+}

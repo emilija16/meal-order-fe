@@ -1,0 +1,52 @@
+<div class="container">
+    <div  class="card">
+    <table class="table table-hover shopping-cart-wrap">
+    <thead class="text-muted">
+    <tr>
+      <th scope="col">My Order</th>
+      <th scope="col" width="120">Total price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let order of orders">
+    <td>
+    <figure class="media">
+        <figcaption class="media-body">
+            <h5 class="title text-truncate">Date: {{order.orderDateTime}} </h5>
+            <dl class="param param-inline small">
+              <div>
+                <dt>Order items: </dt>
+                <dd *ngFor="let orderItem of order.shoppingItems">
+                    <div class="list-meals">
+                      <ul >
+                          <li>
+                            {{orderItem.meal.name}} |
+                          </li>
+                      </ul>
+                    </div>
+              </dd>
+              </div>
+                <dt>User: </dt>              
+            <dd>
+                <div class="list-meals">
+                  <ul >
+                      <li>
+                        {{order.user.firstName}} {{order.user.lastName}}
+                      </li>
+                  </ul>
+                </div>
+          </dd>
+        </dl>
+    </figcaption>
+    </figure> 
+        </td>
+        <td> 
+            <div class="price-wrap"> 
+                <var class="price">{{order.totalPrice}}</var> 
+            </div>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+</div>   
+</div>

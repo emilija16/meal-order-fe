@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 150px;
+
+  button.btn.btn-green {
+    border: 1px solid #4e763b;
+    color: #4e763b;
+  }
+
+  table {
+    width: 800px;
+    margin-top: 20px;
+    text-align: center;
+
+    thead {
+      background-color: #4e763b;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="wrapper">
+    <form>
+      <div class="text-center">
+        <h4><i class="fas fa-utensils"></i> Create Meal Type</h4>
+      </div>
+      <div class="form-group col-lg-4">
+        <label>Name</label>
+        <input [formControl]="name" type="text" class="form-control" >
+      </div>
+      <button type="button" class="btn" (click)="save()">Save</button>
+      <p *ngIf="invalidInput" class="error-message" >This field is required.</p>
+    </form>
+  </div>
+</div>

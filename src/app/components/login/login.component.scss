@@ -1,0 +1,109 @@
+.frame {
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, white, #4e763b);
+  padding-top: 13%;
+}
+
+.wrapper {
+  width: 400px;
+  height: 350px;
+  background: white;
+  margin: auto;
+  border-radius: 30px;
+  padding-top: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+
+  .error-message {
+    color: red;
+    margin-left: 45px;
+  }
+
+  .alert.alert-danger {
+    background-color: white;
+    height: 15px;
+    padding: 0px;
+    border: none;
+    color: red;
+    margin-left: 45px;
+  }
+}
+
+.title {
+  color: #4e763b;
+  font-weight: 500;
+  font-size: 26px;
+  margin-left: 20px;
+}
+
+.sign-in-btn {
+  border-radius: 26px;
+  color: white;
+  background: #4e763b;
+  border: 0;
+  padding: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  float: right;
+  margin: 35px;
+  box-shadow: 0px 10px 15px -2px #313131;
+  outline: none;
+}
+
+.sign-in-btn:hover {
+  box-shadow: 0px 10px 15px -2px black;
+}
+
+.sign-in-btn:active {
+  box-shadow: none;
+}
+
+.singnin-input {
+  width: 100%;
+  border: 1px solid #c5c7ce;
+  border-radius: 24px;
+  margin: 8px 0;
+  width: 80%;
+  margin-left: 10%;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  padding: 18px;
+  margin-top: 25px;
+}
+
+.inputWithIcon .singnin-input {
+  padding-left: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  left: 0;
+  top: -16px;
+  margin-left: 11%;
+  padding: 9px 8px;
+  color: #c5c7ce;
+  transition: 0.3s;
+  margin-top: 30px;
+}
+
+.inputWithIcon.inputIconBg i {
+  background-color: #c5c7ce;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.singnin-input:focus {
+  box-shadow: 0px 0px 5px 1px #4e763b;
+  border: 1px solid #4e763b;
+}
+
+.singnin-input:focus + i {
+  color: #4e763b;
+}

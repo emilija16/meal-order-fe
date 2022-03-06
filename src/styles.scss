@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+* {
+  font-family: "Libre Baskerville", serif;
+  font-size: 14px;
+}
+
+nav {
+  height: 70px;
+
+  a {
+    cursor: pointer;
+  }
+  a.navbar-brand {
+    margin-left: 10px;
+    color: #4e763b;
+  }
+
+  a.nav-link {
+    color: #4e763b;
+  }
+  ul.navbar-nav.navbar-right {
+    li.nav-item {
+      a.nav-link {
+        margin-right: 10px;
+        color: #4e763b;
+      }
+    }
+  }
+}
+
+#logo {
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
